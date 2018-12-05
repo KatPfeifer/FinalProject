@@ -9,6 +9,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import pkgApp.RetirementApp;
+import pkgCore.Retirement;
 
 public class RetirementController implements Initializable {
 
@@ -60,9 +61,14 @@ public class RetirementController implements Initializable {
 	
 	@FXML
 	public void btnCalculate(ActionEvent event) {
-		
-		//	TODO: Call AmountToSave and TotalAmountSaved and populate 
-		
+		Retirement rmt = new Retirement(Integer.parseInt(txtYearsToWork.getText()), Double.parseDouble(txtAnnualReturnPay.getText()), Integer.parseInt(txtYearsRetired.getText()), Double.parseDouble(txtAnnualReturnWithdrawal.getText()), Double.parseDouble(txtRequiredIncome.getText()), Double.parseDouble(txtMonthlySSI.getText())); 
+		double dNeedToSave=rmt.TotalAmountSaved();
+		String StrNeedToSave=String.format("%.2f", dNeedToSave);
+		double dSaveEachMonth=rmt.AmountToSave();
+		String StrSaveEachMonth=String.format("%.2f", dSaveEachMonth);
+		lblSaveEachMonth.setText(StrSaveEachMonth);
+		System.out.println(StrSaveEachMonth);
+		lblNeedToSave.setText(StrNeedToSave);
 	}
 	
 }

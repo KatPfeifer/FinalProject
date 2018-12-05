@@ -73,8 +73,8 @@
                </GridPane.margin>
             </HBox>
             <TextField fx:id="txtYearsToWork" prefHeight="25.0" prefWidth="62.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Label text="Label" GridPane.columnIndex="1" />
-            <Label text="Label" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Label fx:id="lblSaveEachMonth" text="Label" GridPane.columnIndex="1" />
+            <Label fx:id="lblNeedToSave" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="4" />
             <TextField fx:id="txtAnnualReturnPay" GridPane.columnIndex="1" GridPane.rowIndex="2" />
             <TextField fx:id="txtYearsRetired" GridPane.columnIndex="1" GridPane.rowIndex="6" />
             <TextField fx:id="txtAnnualReturnWithdrawal" GridPane.columnIndex="1" GridPane.rowIndex="7" />
