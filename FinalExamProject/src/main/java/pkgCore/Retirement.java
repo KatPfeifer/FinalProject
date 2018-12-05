@@ -1,5 +1,7 @@
 package pkgCore;
 
+import org.apache.poi.ss.formula.functions.Finance;
+import org.apache.poi.ss.formula.functions.FinanceLib;
 public class Retirement {
 
 	private int iYearsToWork;
@@ -9,7 +11,14 @@ public class Retirement {
 	private double dRequiredIncome;
 	private double dMonthlySSI;
 	
-	//TODO: Build the contructor, getters and setters for the attributes above.
+	public Retirement(int iYearsToWork, double dAnnualReturnWorking, int iYearsRetired, double dAnnualReturnRetired, double dRequiredIncome, double dMonthlySII) {
+		this.iYearsToWork=iYearsToWork;
+		this.dAnnualReturnWorking=dAnnualReturnWorking;
+		this.iYearsRetired=iYearsRetired;
+		this.dAnnualReturnRetired=dAnnualReturnRetired;
+		this.dRequiredIncome=dRequiredIncome;
+		this.dMonthlySSI=dMonthlySII;
+	}
 	
 	public double AmountToSave()
 	{

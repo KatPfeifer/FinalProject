@@ -6,6 +6,7 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import pkgApp.RetirementApp;
 
@@ -17,6 +18,26 @@ public class RetirementController implements Initializable {
 	@FXML
 	private TextField txtYearsToWork;
 	
+	@FXML
+	private TextField txtAnnualReturnPay;
+	
+	@FXML
+	private TextField txtYearsRetired;
+	
+	@FXML
+	private TextField txtAnnualReturnWithdrawal;
+	
+	@FXML
+	private TextField txtRequiredIncome;
+	
+	@FXML
+	private TextField txtMonthlySSI;
+	
+	@FXML
+	private Label lblSaveEachMonth;
+	
+	@FXML
+	private Label lblNeedToSave;
 
 	public RetirementApp getMainApp() {
 		return mainApp;
