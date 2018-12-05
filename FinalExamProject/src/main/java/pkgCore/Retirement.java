@@ -22,18 +22,13 @@ public class Retirement {
 	
 	public double AmountToSave()
 	{
-		//TODO: Determine the amount to save each month based on TotalAmountSaved, YearsToWork
-		//		and Annual return while working
-		
-		
-		return 0;
+		double pmt = FinanceLib.pmt(dAnnualReturnWorking/12, iYearsToWork*12, 0, TotalAmountSaved(), false);
+		return pmt*-1;
 	}
 	
 	public double TotalAmountSaved()
 	{
-		//	TODO: Determine amount to be saved based on Monthly SSI, Required Income, Annual return during retirement
-		//		and number of years retired.
-		//
-		return 0;
+		double pv = FinanceLib.pv(dAnnualReturnRetired/12, iYearsRetired*12, dRequiredIncome-dMonthlySSI, 0, false);
+		return pv*-1;
 	}
 }
