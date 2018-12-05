@@ -55,8 +55,14 @@ public class RetirementController implements Initializable {
 	@FXML
 	public void btnClear(ActionEvent event) {
 		System.out.println("Clear pressed");
-		
-		//	TODO: Clear all the text inputs
+		txtYearsToWork.setText("");
+		txtAnnualReturnPay.setText("");
+		txtYearsRetired.setText("");
+		txtAnnualReturnWithdrawal.setText("");
+		txtRequiredIncome.setText("");
+		txtMonthlySSI.setText("");
+		lblSaveEachMonth.setText("");
+		lblNeedToSave.setText("");
 	}
 	
 	@FXML
